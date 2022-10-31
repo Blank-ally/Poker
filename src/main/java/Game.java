@@ -28,17 +28,9 @@ public class Game {
                 return true;
             }
         }
-      /*  if (search(array, array.get(0).getFace()) == 3) {
-            return true;
-        } else if (search(array, array.get(1).getFace()) == 3) {
-            return true;
-        } else if (search(array, array.get(2).getFace()) == 3) {
-            return true;
-        } else if (search(array, array.get(3).getFace()) == 3) {
-            return true;
-        } else return search(array, array.get(4).getFace()) == 3;
 
-*/ return false;
+
+        return false;
     }
 
     public boolean fourOfKind(ArrayList<Card> array) {
@@ -48,14 +40,6 @@ public class Game {
                 return true;
             }
         }
-
-       /* else if (search(array, array.get(1).getFace()) == 4) {
-            return true;
-        } else if (search(array, array.get(2).getFace()) == 4) {
-            return true;
-        } else if (search(array, array.get(3).getFace()) == 4) {
-            return true;
-        } else return search(array, array.get(4).getFace()) == 4;*/
 
         return false;
     }
@@ -68,7 +52,7 @@ public class Game {
     public boolean twoPair(ArrayList<Card> array) {
         for (int i = 0; i < array.size(); i++) {
             if (array.size() > 4) {
-                for (int j = i + 1; j < array.size();  j++) {
+                for (int j = i + 1; j < array.size(); j++) {
                     if (array.get(j).getFace().equals(array.get(i).getFace())) {
                         array.remove(j);
                         array.remove(i);
@@ -79,7 +63,6 @@ public class Game {
 
 
         }
-
 
 
         for (int i = 0; i < array.size(); i++) {
@@ -98,10 +81,8 @@ public class Game {
         }
 
 
-
         return array.size() == 1;
     }
-
 
 
     public boolean onePair(ArrayList<Card> array) {
@@ -111,15 +92,7 @@ public class Game {
                 return true;
             }
         }
-        /*if (search(array, array.get(0).getFace()) == 2) {
-            return true;
-        } else if (search(array, array.get(1).getFace()) == 2) {
-            return true;
-        } else if (search(array, array.get(2).getFace()) == 2) {
-            return true;
-        } else if (search(array, array.get(3).getFace()) == 2) {
-            return true;
-        } else return search(array, array.get(4).getFace()) == 2;*/
+
         return false;
     }
 
