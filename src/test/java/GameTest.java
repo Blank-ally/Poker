@@ -12,9 +12,11 @@ class GameTest {
     Card card3 = new Card("a","hearts");
     Card card4 = new Card("j","hearts");
 
-    @Test
+    @Test/**
+     this
+ */
     void flush() {
-        ArrayList<Card> hand = new ArrayList<>();
+
         Game game = new Game();
         hand.add(card);
         hand.add(card1);
@@ -26,7 +28,7 @@ assertEquals(true,game.flush(hand));
 
     @Test
     void threeOfKind() {
-        ArrayList<Card> hand = new ArrayList<>();
+
         Game game = new Game();
         hand.add(card);
         hand.add(card1);
@@ -38,7 +40,7 @@ assertEquals(true,game.flush(hand));
 
     @Test
     void fourOfKind() {
-        ArrayList<Card> hand = new ArrayList<>();
+
         Game game = new Game();
         hand.add(card);
         hand.add(card1);
@@ -50,7 +52,7 @@ assertEquals(true,game.flush(hand));
 
     @Test
     void fullHouse() {
-        ArrayList<Card> hand = new ArrayList<>();
+
         Game game = new Game();
         hand.add(card);
         hand.add(card1);
@@ -61,7 +63,7 @@ assertEquals(true,game.flush(hand));
     }
 
     @Test
-    void onePair() {  ArrayList<Card> hand = new ArrayList<>();
+    void onePair() {
         Game game = new Game();
         hand.add(card);
         hand.add(card1);
@@ -71,7 +73,7 @@ assertEquals(true,game.flush(hand));
         assertEquals(false,game.onePair(hand));
     }
     @Test
-    void twoPair() {  ArrayList<Card> hand = new ArrayList<>();
+    void twoPair() {
         Game game = new Game();
         hand.add(card);
         hand.add(card1);
@@ -83,7 +85,7 @@ assertEquals(true,game.flush(hand));
 
     @Test
     void search() {
-        ArrayList<Card> hand = new ArrayList<>();
+
         Game game = new Game();
         hand.add(card);
         hand.add(card1);
