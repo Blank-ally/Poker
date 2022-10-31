@@ -23,19 +23,17 @@ public class Game {
 
 
         for (int i = 0; i < array.size(); i++) {
-            if (search(array, array.get(i).getFace()) == 3
+            if (search(array, array.get(i).getFace()) >= 3
             ) {
                 return true;
             }
         }
-
-
-        return false;
+      return false;
     }
 
     public boolean fourOfKind(ArrayList<Card> array) {
         for (int i = 0; i < array.size(); i++) {
-            if (search(array, array.get(i).getFace()) == 4
+            if (search(array, array.get(i).getFace()) >= 4
             ) {
                 return true;
             }
@@ -52,7 +50,7 @@ public class Game {
     public boolean twoPair(ArrayList<Card> array) {
         for (int i = 0; i < array.size(); i++) {
             if (array.size() > 4) {
-                for (int j = i + 1; j < array.size(); j++) {
+                for (int j = i + 1; j < array.size();  j++) {
                     if (array.get(j).getFace().equals(array.get(i).getFace())) {
                         array.remove(j);
                         array.remove(i);
@@ -63,6 +61,7 @@ public class Game {
 
 
         }
+
 
 
         for (int i = 0; i < array.size(); i++) {
@@ -81,27 +80,28 @@ public class Game {
         }
 
 
+
         return array.size() == 1;
     }
 
 
+
     public boolean onePair(ArrayList<Card> array) {
-        for (int i = 0; i < array.size(); i++) {
-            if (search(array, array.get(i).getFace()) == 4
+       for (int i = 0; i < array.size(); i++) {
+            if (search(array, array.get(i).getFace()) >= 2
             ) {
                 return true;
             }
         }
-
         return false;
     }
 
 
-    static int search(ArrayList<Card> arr, String s) {
+    static int search(ArrayList<Card> array, String input) {
         int counter = 0;
-        for (int j = 0; j < arr.size(); j++)
+        for (int i = 0; i < array.size(); i++)
 
-            if (s.equals(arr.get(j).getFace()))
+            if (input.equals(array.get(i).getFace()))
                 counter++;
 
         return counter;
